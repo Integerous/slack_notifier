@@ -32,7 +32,7 @@ public class BotController {
     }
 
     private void sendMessageIfAvailable(int numberOfApplicants) {
-        if (numberOfApplicants == MAXIMUM_NUMBER_OF_APPLICANTS) {
+        if (numberOfApplicants < MAXIMUM_NUMBER_OF_APPLICANTS) {
             System.out.println(ALARM_MESSAGE + (MAXIMUM_NUMBER_OF_APPLICANTS - numberOfApplicants));
             sendMessage(numberOfApplicants);
         }
