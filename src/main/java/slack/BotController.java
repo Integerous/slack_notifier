@@ -36,7 +36,7 @@ public class BotController {
 
     private void sendMessageIfAvailable(int numberOfApplicants) {
         if (numberOfApplicants != MAXIMUM_NUMBER_OF_APPLICANTS) {
-            System.out.println(ALARM_MESSAGE + (MAXIMUM_NUMBER_OF_APPLICANTS - numberOfApplicants));
+            System.out.println(ALARM_MESSAGE + (MAXIMUM_NUMBER_OF_APPLICANTS - numberOfApplicants) + "\n" + getCurrentTime());
             sendMessage(numberOfApplicants);
         }else {
             sendState();
